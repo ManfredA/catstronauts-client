@@ -1,8 +1,9 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import { IconArrowRight, IconDoubleArrowRight, colors } from '../styles';
+
 import { Link } from '@reach/router';
-import { colors, IconArrowRight, IconDoubleArrowRight } from '../styles';
+import React from 'react';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
+import styled from '@emotion/styled';
 
 /**
  * Module Navigation: displays a list of modules titles
@@ -28,7 +29,7 @@ const ModulesNav = ({ module, track }) => {
                     <IconArrowRight width="14px" weight="thin" />
                   )}
                   <div>{navModule.title}</div>
-                  <div>{humanReadableTimeFromSeconds(navModule.length)}</div>
+                  <div>{humanReadableTimeFromSeconds(navModule.durationInSeconds)}</div>
                 </ModuleListItemContent>
               </ModuleNavStyledLink>
             </div>
